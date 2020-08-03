@@ -9,7 +9,7 @@ const ClassComponentWithObserver = observer(
     render() {
       return (
         <div>
-          <h2>Class component with Observer as Wrapper</h2>
+          <h2>Class component with Observer</h2>
           <pre>
             {`          
 const ClassComponentWithObserver = observer(
