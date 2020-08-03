@@ -1,6 +1,11 @@
 import React from 'react';
 
-import { ClassComponentWithDecorator, ClassComponentWithObserver, FunctionComponentWithObserver } from './components';
+import {
+  ClassComponentWithDecorator,
+  ClassComponentWithObserver,
+  FunctionComponentWithObserver,
+  UsingObserverComponent,
+} from './components';
 
 function App() {
   return (
@@ -12,6 +17,7 @@ function App() {
         <ClassComponentWithDecorator />
         <ClassComponentWithObserver />
         <FunctionComponentWithObserver />
+        <UsingObserverComponent />
       </main>
     </div>
   );
