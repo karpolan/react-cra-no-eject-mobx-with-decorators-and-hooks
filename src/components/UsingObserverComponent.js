@@ -8,7 +8,7 @@ class UsingObserverComponent extends Component {
   render() {
     return (
       <div>
-        <h2>Usage of MobX's {'<Obsever />'} component</h2>
+        <h2>Usage of MobX's {'<Observer />'} component</h2>
         <Observer>{() => <div>{this.props.somePropsAsObservable}</div>}</Observer>
         <pre>
           {`          
