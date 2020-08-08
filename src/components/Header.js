@@ -28,8 +28,12 @@ const Header = () => {
   return (
     <header>
       <h1>Create React App with MobX Demo</h1>
-      <button onClick={handleSampleAction}> store.sample.action()</button>
-      <button onClick={handleTimerTick}>store.timer.reset()</button>
+      <h2>No eject required to get decorators work</h2>
+      <h2>MobX is compatible with Hooks, setState() and React Context</h2>
+      <div className="buttons">
+        <button onClick={handleSampleAction}> store.sample.action()</button>
+        <button onClick={handleTimerTick}>store.timer.reset()</button>
+      </div>
     </header>
   );
 };
