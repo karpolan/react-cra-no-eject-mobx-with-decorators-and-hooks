@@ -9,7 +9,7 @@ class TimerStore {
 
   @computed
   get elapsedTime() {
-    return Math.round((this.current - this.start) / 1000) + ' seconds';
+    return Math.round(Math.max(0, this.current - this.start) / 1000) + ' seconds';
   }
 
   @action

@@ -1,13 +1,16 @@
 import React from 'react';
 import { Store } from './store';
 import {
+  Header,
+  Footer,
   ClassComponentWithDecorator,
   ClassComponentWithObserver,
   FunctionComponentWithObserver,
+  FunctionComponentUseObserver,
   UsingObserverComponent,
   UsingObserverComponentAsRenderProps,
-  Header,
 } from './components';
+import './App.css';
 
 /**
  * App with MobX store(s) injected via React Context API
@@ -20,13 +23,12 @@ function App() {
         <main>
           <ClassComponentWithDecorator />
           <ClassComponentWithObserver />
+          <FunctionComponentUseObserver />
           <FunctionComponentWithObserver />
           <UsingObserverComponent />
           <UsingObserverComponentAsRenderProps />
         </main>
-        <footer>
-          Copyright &copy; <a href="https://karpolan.com">KARPOLAN</a>
-        </footer>
+        <Footer />
       </div>
     </Store>
   );

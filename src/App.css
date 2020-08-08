@@ -1,0 +1,73 @@
+body {
+  background-color: cadetblue;
+}
+
+.app {
+  margin: 8px auto;
+  max-width: 920px;
+  background-color: lightgrey;
+}
+
+header {
+  text-align: center;
+  padding: 8px;
+}
+
+header h1,
+header h2 {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+header button {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 8px;
+  font-size: smaller;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.component {
+  margin: 8px;
+  padding: 0;
+  background-color: #fff;
+  max-width: 450px;
+  min-width: 300px;
+  flex: 1;
+  border-style: solid;
+  border-color: #444;
+  border-width: 1px;
+}
+
+.component h1,
+.component h2 {
+  margin: 4px;
+  padding: 4px;
+  font-size: 100%;
+  color: #fff;
+  background-color: cadetblue;
+  /* border-style: inset;
+  border-color: cadetblue;
+  border-width: 1px; */
+}
+
+.component div {
+  padding: 0 8px;
+}
+
+.component textarea {
+  margin: 8px;
+  width: calc(100% - 24px);
+  height: 96px;
+  resize: none;
+}
