@@ -1,7 +1,7 @@
 {
   "name": "react-cra-no-eject-mobx-with-decorators-and-hooks",
   "description": "Create React App with MobX, decorators, hooks, setState() and without eject! Impossible? Yeah yeah yeah :)",
-  "version": "0.1.8",
+  "version": "0.3.9",
   "private": true,
   "author": "Anton Karpenko <i@karpolan.com> (https://karpolan.com)",
   "keywords": [
