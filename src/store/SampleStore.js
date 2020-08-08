@@ -3,18 +3,19 @@ import { observable, computed, action } from 'mobx';
 /**
  * Sample MobX store
  */
-class Sample {
+class SampleStore {
   @observable observable = 0; // Changed by actions
 
   @computed
   get computed() {
-    return observable * observable;
+    return this.observable * this.observable;
   }
 
   @action
   action() {
-    observable = observable + 1;
+    this.observable = this.observable + 1;
+    console.log('SampleStore.action() - observable:', this.observable);
   }
 }
 
-export default Sample;
+export default SampleStore;
