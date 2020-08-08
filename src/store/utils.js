@@ -8,7 +8,7 @@ import 'mobx-react-lite/batchingForReactDom'; // Read why it is needed: https://
 const StoreContext = React.createContext();
 
 /**
- * Store Context Provider
+ * Store Context Provider to wrap parts of Application into StoreContext
  */
 export const StoreProvider = ({ children, store }) => {
   return <StoreContext.Provider value={store}>{children}</StoreContext.Provider>;

@@ -6,17 +6,14 @@ import {
   UsingObserverComponent,
   UsingObserverComponentAsRenderProps,
 } from './components';
-import { StoreProvider, CombinedStore } from './store';
-
-// Instance of the MobX Store
-const store = new CombinedStore();
+import { Store } from './store';
 
 /**
  * App with MobX stores added via React Context API
  */
 function App() {
   return (
-    <StoreProvider store={store}>
+    <Store>
       <div className="app">
         <header>
           <h1>Create React App with MobX Demo</h1>
@@ -29,7 +26,7 @@ function App() {
           <UsingObserverComponentAsRenderProps />
         </main>
       </div>
-    </StoreProvider>
+    </Store>
   );
 }
 
