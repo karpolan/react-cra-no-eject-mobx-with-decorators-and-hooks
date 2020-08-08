@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import { withStore } from '../store';
 
+const CODE = `@observer
+class ClassComponentWithDecorator extends Component {
+  render() {
+    <div>{this.props.store?.xxx}</div>
+    ...
+  };
+}`;
+
 /**
  * Class Component with MobX decorator
  * Note: ESNext syntax with decorator syntax must be enabled
@@ -10,19 +18,17 @@ import { withStore } from '../store';
 @observer // MobX standard decorator
 class ClassComponentWithDecorator extends Component {
   render() {
-    console.log('Rendering Class Component with @observer decorator, store:', this.props.store);
+    // console.log('Rendering Class Component with @observer decorator, store:', this.props.store);
     return (
-      <div>
+      <div className="component">
         <h2>Class component with @observer decorator</h2>
-        <pre>
-          {`          
-@observer
-class ClassComponentWithDecorator extends Component {
-  render() {
-    ...
-  };
-}`}
-        </pre>{' '}
+        <div>
+          Elapsed time: <b>{this.props?.store?.timer?.elapsedTime}</b>
+        </div>
+        <div>
+          Observable value: <b>{this.props?.store?.sample?.observable}</b>
+        </div>
+        <textarea readOnly value={CODE} />
       </div>
     );
   }

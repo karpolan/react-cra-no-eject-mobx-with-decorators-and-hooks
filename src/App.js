@@ -1,35 +1,36 @@
 import React from 'react';
+import { Store } from './store';
 import {
+  Header,
+  Footer,
   ClassComponentWithDecorator,
   ClassComponentWithObserver,
   FunctionComponentWithObserver,
+  FunctionComponentUseObserver,
   UsingObserverComponent,
   UsingObserverComponentAsRenderProps,
 } from './components';
-import { StoreProvider, CombinedStore } from './store';
-
-// Instance of the MobX Store
-const store = new CombinedStore();
+import './App.css';
 
 /**
- * App with MobX stores added via React Context API
+ * App with MobX store(s) injected via React Context API
  */
 function App() {
   return (
-    <StoreProvider store={store}>
+    <Store>
       <div className="app">
-        <header>
-          <h1>Create React App with MobX Demo</h1>
-        </header>
+        <Header />
         <main>
           <ClassComponentWithDecorator />
           <ClassComponentWithObserver />
+          <FunctionComponentUseObserver />
           <FunctionComponentWithObserver />
           <UsingObserverComponent />
           <UsingObserverComponentAsRenderProps />
         </main>
+        <Footer />
       </div>
-    </StoreProvider>
+    </Store>
   );
 }
 

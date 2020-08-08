@@ -2,11 +2,17 @@
 
 Application has been started as [Create React App](https://github.com/facebook/create-react-app) then [MobX state management](https://mobx.js.org/) added.
 
-It demonstrates the mix of "imposable combinations" like decorators, hooks, setState(), and so on.
+It demonstrates the mix of "impossible combinations" like decorators, hooks, setState(), and so on without ejections the React App.
 
 Also, this is a "playground" to test compatibility of MobX releases with different React versions.
 
-Live demo: https://----.netlify.app
+Live demo: [on Netlify](https://react-cra-no-eject-mobx-with-decorators-and-hooks.netlify.app/)
+
+See also:
+
+- [MobX with React](https://mobx-react.js.org)
+- [Rewire for React App](https://github.com/timarney/react-app-rewired#readme)
+- [Decorators in Babel](https://babeljs.io/docs/en/babel-plugin-proposal-decorators)
 
 Created by [Anton Karpenko](https://karpolan.com)
 
