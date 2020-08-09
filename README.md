@@ -2,7 +2,7 @@
 
 Application has been started as [Create React App](https://github.com/facebook/create-react-app) then [MobX state management](https://mobx.js.org/) added.
 
-It demonstrates the mix of "impossible combinations" like decorators, hooks, setState(), and so on without ejections the React App.
+It demonstrates the mix of "impossible combinations" like decorators, hooks, setState(), and so on without eject the Create React App.
 
 Also, this is a "playground" to test compatibility of MobX releases with different React versions.
 
