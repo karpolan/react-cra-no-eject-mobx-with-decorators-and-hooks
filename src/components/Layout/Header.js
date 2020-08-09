@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useStore } from '../store';
+import { useStore } from '../../store';
 
 /**
  * Renders Header with some controls

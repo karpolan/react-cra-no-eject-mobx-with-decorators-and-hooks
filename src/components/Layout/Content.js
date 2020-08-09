@@ -6,10 +6,10 @@ import {
   FunctionComponentUseObserver,
   UsingObserverComponent,
   UsingObserverComponentAsRenderProps,
-} from './MobXObserverComponents';
+} from '../MobXObserverComponents';
 
 /**
- * Renders Main Content, list of continents actually
+ * Renders Main Content, list of components actually
  */
 const Content = () => {
   return (
