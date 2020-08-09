@@ -9,13 +9,13 @@ class TimerStore {
 
   @computed
   get elapsedTime() {
-    return Math.round(Math.max(0, this.current - this.start) / 1000) + ' seconds';
+    return Math.round(Math.max(0, this.current - this.start) / 1000) + ' sec';
   }
 
   @action
   tick() {
     this.current = Date.now();
-    console.log('TimerStore.tick() - elapsedTime:', this.elapsedTime);
+    // console.log('TimerStore.tick() - elapsedTime:', this.elapsedTime);
   }
 
   @action
