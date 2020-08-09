@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useStore } from '../store';
 
 /**
  * Renders Header with some controls
  */
-const Header = () => {
+const Header = ({ onRemountClick = () => console.warn('Unhandled Header.onRemountClick()') }) => {
   const store = useStore();
-  console.log('Header() - store:', store);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -17,12 +17,12 @@ const Header = () => {
     };
   }, []);
 
-  const handleSampleAction = () => {
-    store.sample.action();
-  };
-
   const handleTimerTick = () => {
     store.timer.reset();
+  };
+
+  const handleSampleAction = () => {
+    store.sample.action();
   };
 
   return (
@@ -31,11 +31,16 @@ const Header = () => {
       <h2>No eject required to get decorators work</h2>
       <h2>MobX is compatible with Hooks, setState() and React Context</h2>
       <div className="buttons">
-        <button onClick={handleSampleAction}> store.sample.action()</button>
-        <button onClick={handleTimerTick}>store.timer.reset()</button>
+        <button onClick={handleTimerTick}>Reset Timer Store</button>
+        <button onClick={handleSampleAction}>Increase Observable Value</button>
+        <button onClick={onRemountClick}>Remount - resets internal state</button>
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  onRemountClick: PropTypes.func,
 };
 
 export default Header;
