@@ -30,7 +30,7 @@
     "react": "^16.13.1",
     "react-app-rewire-mobx": "^1.0.9",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "5.0.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.10.5",
